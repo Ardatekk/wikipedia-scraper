@@ -1,5 +1,5 @@
 # 🌍 Leaders Data Collector (Dummy Version)
-![WIKIPEDIA-SCRAPER](https://i.ibb.co/gn6r8d0/Chat-GPT-Image-20-ub-2026-15-15-17.png)
+![WIKIPEDIA-SCRAPER](https://i.ibb.co/PvhVwQRP/wxw.png)
 A simple Python project that simulates collecting historical leaders for multiple countries and exporting the data into a structured JSON file.
 
 This version uses **dummy data instead of real APIs or web scraping**, making it perfect for learning, testing, and understanding the data flow without external dependencies.
