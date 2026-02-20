@@ -1,0 +1,32 @@
+{
+    "us": [
+        {
+            "name": "George Washington",
+            "start_date": "1789",
+            "end_date": "1797",
+            "wikipedia_first_paragraph": "This is a simulated first paragraph for https://en.wikipedia.org/wiki/George_Washington"
+        },
+        {
+            "name": "Abraham Lincoln",
+            "start_date": "1861",
+            "end_date": "1865",
+            "wikipedia_first_paragraph": "This is a simulated first paragraph for https://en.wikipedia.org/wiki/Abraham_Lincoln"
+        }
+    ],
+    "fr": [
+        {
+            "name": "Napoleon Bonaparte",
+            "start_date": "1804",
+            "end_date": "1815",
+            "wikipedia_first_paragraph": "This is a simulated first paragraph for https://en.wikipedia.org/wiki/Napoleon"
+        }
+    ],
+    "be": [
+        {
+            "name": "Leopold II of Belgium",
+            "start_date": "1865",
+            "end_date": "1909",
+            "wikipedia_first_paragraph": "This is a simulated first paragraph for https://en.wikipedia.org/wiki/Leopold_II_of_Belgium"
+        }
+    ]
+}
