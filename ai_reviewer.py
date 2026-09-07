@@ -1,5 +1,5 @@
 import os
-import google.generativeai as genai
+from google import genai
 
 # Fetch API key from GitHub Secrets
 api_key = os.environ.get("GEMINI_API_KEY")
@@ -8,11 +8,11 @@ if not api_key:
     print("⚠️ GEMINI_API_KEY not found in environment variables!")
     exit(0)
 
-genai.configure(api_key=api_key)
-model = genai.GenerativeModel('gemini-1.5-flash')
+# Initialize client with new SDK
+client = genai.Client(api_key=api_key)
 
 # Define target file for AI code review
-scraper_filename = "main.py" 
+scraper_filename = "main.py"
 
 try:
     with open(scraper_filename, "r", encoding="utf-8") as f:
@@ -27,8 +27,13 @@ try:
     ```
     """
 
-    print(" AI Code Reviewer analyzing target script...\n" + "="*40)
-    response = model.generate_content(prompt)
+    print("🤖 AI Code Reviewer analyzing target script...\n" + "="*40)
+    
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=prompt,
+    )
+    
     print(response.text)
     print("="*40)
 
