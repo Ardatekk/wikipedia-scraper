@@ -8,14 +8,18 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/setup-python@v4
+        uses: actions/checkout@v4
 
-      - name: set up python environment
+      - name: Set up Python environment
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
 
-      - name: Run diagnostic checks
+      - name: Install dependencies
         run: |
-          echo "GitHub Actions workflow executed successfully."
-          python --version
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run Scraper Script
+        run: |
+          python main.py
